@@ -40,7 +40,7 @@ export default {
       formData.append("name", this.client.name);
       formData.append("email", this.client.email);
       axios
-        .post("http://localhost:8000/v1/public/clients/store", formData)
+        .post("http://localhost:81/v1/public/clients/store", formData)
         .then(() => {
           router.push("/clientes");
         })

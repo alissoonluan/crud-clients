@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+  vue-ui:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "82:8080"
+    container_name: vue-ui
+    volumes:
+      - ./frontend:/usr/src/app/frontend
+      - /usr/src/app/frontend/node_modules
+  api:
+    image: "webdevops/php-apache-dev:7.4-alpine"
+    container_name: api
+    ports:
+      - 81:80
+    volumes:
+      - ./backend/api:/app
+    env_file: ./backend/api/.env

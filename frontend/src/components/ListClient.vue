@@ -102,7 +102,7 @@ export default {
   methods: {
     getClient() {
       axios
-        .get("http://localhost:8000/v1/public/clients")
+        .get("http://localhost:81/v1/public/clients")
         .then((r) => {
           this.clients = r.data.clients;
         })
@@ -112,7 +112,7 @@ export default {
     },
     confirmDel(id) {
       axios
-        .delete("http://localhost:8000/v1/public/clients/delete/" + id)
+        .delete("http://localhost:81/v1/public/clients/delete/" + id)
         .then(() => {
           this.getClient();
           this.dialog = false;

@@ -28,7 +28,7 @@ export default {
   mounted() {
     this.id = this.$route.params.id;
     axios
-      .get("http://localhost:8000/v1/public/clients/" + this.id)
+      .get("http://localhost:81/v1/public/clients/" + this.id)
       .then((r) => {
         this.client = r.data.clients[0];
       })
@@ -53,10 +53,7 @@ export default {
       params.append("email", this.client.email);
 
       axios
-        .post(
-          "http://localhost:8000/v1/public/clients/update/" + this.id,
-          params
-        )
+        .post("http://localhost:81/v1/public/clients/update/" + this.id, params)
         .then(function() {
           router.push("/clientes");
         })
