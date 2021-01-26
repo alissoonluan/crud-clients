@@ -2,8 +2,7 @@
 1.  [Iniciando](#iniciando)
 2.  [Pré-Requisitos](#prerequisitos)
 3.  [Instalação](#instalacao)
-4.  [Instalação](#instalacao)
-5.  [Autor](#autor)
+4.  [Autor](#autor)
 
 
 <a name="iniciando"/></a>
